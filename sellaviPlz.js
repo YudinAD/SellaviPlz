@@ -1,4 +1,4 @@
-class SellaviPlz {
+window.SellaviPlz = class SellaviPlz {
     constructor(props = {}) {
         this.shopNumber = props.shopNumber;
         this.shopCountry = props.shopCountry;
@@ -347,8 +347,6 @@ class SellaviPlz {
         }
     }
 }
-
-window.SellaviPlz = SellaviPlz;
 
 // const doMagic = new SellaviPlz({
 //     shopNumber: '111111',
