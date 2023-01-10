@@ -141,7 +141,7 @@ class SellaviPlz {
             const blackScreen = document.querySelector('.search_black_screen');
             const searchClose = document.querySelector('.search_close');
     
-            headerSearchBtn.addEventListener('click', () => {
+            this.headerSearchBtnElem.addEventListener('click', () => {
                 const searchText = this.headerSearchInputElem.value.trim();
     
                     if (searchText) window.open(`/search/?search=${searchText}&description=true`, '_self')
@@ -265,9 +265,11 @@ class SellaviPlz {
 
     renameCheckoutCommentLabel() {
         try {
-            const checkoutLabelComments = document.querySelector('#home.checkout-checkout .seller-comments label');
-    
-            checkoutLabelComments.textContent = 'Комментарий к заказу';
+            if (document.querySelector('.checkout-checkout')) {
+                const checkoutLabelComments = document.querySelector('#home.checkout-checkout .seller-comments label');
+        
+                checkoutLabelComments.textContent = 'Комментарий к заказу';
+            }
         } catch (e) { console.error(e) }
     }
 
@@ -295,7 +297,7 @@ class SellaviPlz {
         try {
             const btn = document.querySelector('.filter_price_button');
     
-            if (btn.textContent.toLowerCase().includes('filter')) btn.textContent = 'Применить фильтр';
+            if (btn && btn.textContent.toLowerCase().includes('filter')) btn.textContent = 'Применить фильтр';
         } catch (e) {console.error(e)}
     }
 
@@ -341,7 +343,7 @@ class SellaviPlz {
             this.renameFilterBtn();
             this.renameTextInCaptchaPlaceholder();
 
-            if(this.hideUnnecessaryLinks) removeUnnecessaryLinks()
+            if(this.hideUnnecessaryLinks) this.removeUnnecessaryLinks()
         }
     }
 }
