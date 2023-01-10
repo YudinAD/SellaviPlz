@@ -344,17 +344,19 @@ class SellaviPlz {
     }
 }
 
-const doMagic = new SellaviPlz({
-    shopNumber: '111111',
-    shopCountry: 'RU',
-    shopMainColor: '#000',
-    headerLoginBtn: 'svg',
-    headerWishlistBtn: 'svg',
-    headerSearchBtn: 'svg',
-    headerCartBtn: 'svg',
-    navInHeader: true,
-    hideCounterOnZero: true,
-    hideUnnecessaryLinks: true,
-    sellaviLogoChanged: true,
-    paymentsAdded: true,
-})
+window.SellaviPlz = SellaviPlz;
+
+// const doMagic = new SellaviPlz({
+//     shopNumber: '111111',
+//     shopCountry: 'RU',
+//     shopMainColor: '#000',
+//     headerLoginBtn: 'svg',
+//     headerWishlistBtn: 'svg',
+//     headerSearchBtn: 'svg',
+//     headerCartBtn: 'svg',
+//     navInHeader: true,
+//     hideCounterOnZero: true,
+//     hideUnnecessaryLinks: true,
+//     sellaviLogoChanged: true,
+//     paymentsAdded: true,
+// })
