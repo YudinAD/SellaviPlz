@@ -130,7 +130,9 @@ class SellaviPlz {
     }
 
     addNavInHeader() {
-        this.headerContainerElem.insertAdjacentElement('beforeend', this.desktopNavElem);
+        try {
+            this.headerContainerElem.insertAdjacentElement('beforeend', this.desktopNavElem);
+        } catch(e) {console.error(e)}
     }
 
     addSearchBtnEffect() {
